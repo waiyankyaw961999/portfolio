@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Cloud, renderSimpleIcon, ICloud } from "react-icon-cloud";
-const allIcons = require("simple-icons");
+import allIcons from "simple-icons";
 
 export default function WordCloud() {
-  const [background, setBackground] = React.useState("#fff");
+  // const [background, setBackground] = React.useState("#fff");
 
   const options: ICloud["options"] = {
     // activateAudio: string
@@ -99,13 +99,13 @@ export default function WordCloud() {
     // zoomMin: number
     // zoomStep: number
   };
-  const toggleBg = () => {
-    if (background === "#fff") {
-      setBackground("#000");
-      return;
-    }
-    setBackground("#fff");
-  };
+  // const toggleBg = () => {
+  //   if (background === "#fff") {
+  //     setBackground("#000");
+  //     return;
+  //   }
+  //   setBackground("#fff");
+  // };
 
   const containerProps: ICloud["containerProps"] = {
     style: {

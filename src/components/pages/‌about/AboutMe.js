@@ -1,5 +1,5 @@
 import React from "react";
-import WordCloud from "../../wordcloud/WordCloud";
+import WordCloud from "../../wordcloud/WordCloud.tsx";
 import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
 
