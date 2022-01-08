@@ -209,6 +209,11 @@ function App() {
             <Container>
               <Routes>
                 <Route
+                  exact
+                  path="/"
+                  element={<Main windowWidth={windowWidth} />}
+                />
+                <Route
                   path="/main"
                   element={<Main windowWidth={windowWidth} />}
                 />
