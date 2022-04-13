@@ -53,7 +53,9 @@ export default function AboutMe({ windowWidth }) {
     <>
       <Left>
         <Header>
-          <Title fs={windowWidth < 1200 ? true : false}>My, Myself</Title>
+          <Title fs={windowWidth < 1200 ? true : false}>
+            Self Introduction
+          </Title>
           <Subtitle>
             I'm a junior software developer with over a year in software
             development. Highly motivated and passionate to learn and develop
@@ -62,10 +64,6 @@ export default function AboutMe({ windowWidth }) {
           <Subtitle>
             I'm flexible, detailed-oriented, independent software developer with
             strong personalities and communications.
-          </Subtitle>
-          <Subtitle>
-            Highly motivated and interested in working on ambitious projects
-            with positive people.
           </Subtitle>
         </Header>
       </Left>
