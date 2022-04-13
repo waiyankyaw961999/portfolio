@@ -4,7 +4,7 @@ import React from "react";
 export default function Button({ name, type }) {
   return (
     <button type={type} className="btn">
-      <span className="text">{name}</span>
+      <span>{name}</span>
     </button>
   );
 }

@@ -35,7 +35,10 @@ const FormWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: ${({ fs }) => (fs ? "3rem" : "4rem")};
+  font-size: 3rem;
+  @media (min-width: 1200px) {
+    font-size: 4rem;
+  }
   width: 80%;
 `;
 
@@ -73,6 +76,7 @@ const Textarea = styled.textarea`
   padding: 0.25rem 0.5rem;
   width: 100%;
   height: 10rem;
+  resize: none;
 `;
 
 const Iframe = styled.iframe`
@@ -90,12 +94,17 @@ export default function Contact({ windowWidth }) {
       <Left>
         <FormWrapper>
           <Body>
-            <Title fs={windowWidth < 1200 ? true : false}>Contact</Title>
+            <Title>Contact</Title>
             <Subtitle>
               Interested to working freelance projects, developing apps. If you
               have any question to ask me, feel free to send an email.
             </Subtitle>
-            <Form>
+            <Form
+              method="POST"
+              action="https://formspree.io/f/xrgjykwp"
+              enctype="multipart/form-data"
+              name="EmailForm"
+            >
               <FormGroup>
                 <Input type="text" name="username" placeholder="Name"></Input>
                 <Input type="email" name="email" placeholder="Email"></Input>

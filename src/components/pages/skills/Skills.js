@@ -19,11 +19,12 @@ const Right = styled.div`
   width: 100%;
   justify-content: center;
 `;
+
 const Header = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  padding: 0 4.25rem;
+  height: 100%;
+  padding: ${({ fs }) => (fs ? "0 4.25rem" : "0 2.25rem")};
   justify-content: center;
   align-items: center;
 `;
@@ -35,12 +36,14 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
+  font-size: ${({ fs }) => (fs ? "0.3rem" : "1.25rem")};
   text-align: justify;
   letter-spacing: 2px;
   margin-bottom: 1.5rem;
 
   a {
     text-decoration: none;
+    color: yellow;
     opacity: 1;
 
     &:hover {
@@ -55,8 +58,9 @@ const ProgressWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 86%;
-  height: 80vh;
+  height: ${(windowWidth) => (windowWidth < 1200 ? "80vh" : "100vh")};
 `;
 
 export default function Skills({ windowWidth }) {
@@ -79,7 +83,8 @@ export default function Skills({ windowWidth }) {
           </Subtitle>
           <Subtitle>
             As I am trying to become a full-stack developer, my main foucs on
-            backend is PHP/Laravel and Python, and ReactJs for frontend.
+            backend is Python/Django, and NextJs/ReactJs for frontend. I am also
+            learning NodeJs and ExpressJs in my free time.
           </Subtitle>
           <Subtitle>
             Visit my{" "}
@@ -92,11 +97,11 @@ export default function Skills({ windowWidth }) {
       </Left>
       <Right>
         <ProgressWrapper>
-          <ProgressBar color={"#C9E016"} title={"Frontend"} done={65} />
-          <ProgressBar color={"#08FDD8"} title={"ReactJs"} done={50} />
+          <ProgressBar color={"#C9E016"} title={"Frontend"} done={50} />
+          <ProgressBar color={"#08FDD8"} title={"NextJs/ReactJs"} done={60} />
           <ProgressBar color={"#DE0477"} title={"Backend"} done={60} />
-          <ProgressBar color={"#E00F00"} title={"PHP/Laravel"} done={70} />
-          <ProgressBar color={"#D6CF15"} title={"Python"} done={70} />
+          <ProgressBar color={"#FF6B6B"} title={"PHP/Laravel"} done={70} />
+          <ProgressBar color={"#00FFDD"} title={"Python/Django"} done={70} />
         </ProgressWrapper>
       </Right>
     </>

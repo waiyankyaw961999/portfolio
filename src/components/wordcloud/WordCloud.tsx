@@ -130,12 +130,14 @@ export default function WordCloud() {
     "git",
     "github",
     "gitlab",
-    "visualstudiocode",
     "mysql",
     "sqlite",
     "wordpress",
     "bootstrap",
     "ubuntu",
+    "mongodb",
+    "django",
+    "graphql",
   ].map((s) =>
     renderSimpleIcon({
       icon: allIcons.Get(s),
