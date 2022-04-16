@@ -55,11 +55,7 @@ export default function Main() {
         <br />
         Full stack Web Developer.
       </Title>
-      <Subtitle>
-        Django/Laravel/
-        <br />
-        NextJS/ReactJS
-      </Subtitle>
+      <Subtitle>Django/Laravel/NextJS/ReactJS</Subtitle>
       <Link style={{ width: "10rem" }} to="/contact">
         <Button name="Contact Me" />
       </Link>
