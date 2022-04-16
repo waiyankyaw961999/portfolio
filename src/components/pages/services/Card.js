@@ -19,15 +19,7 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
-  svg {
-    width: 50px;
-    height: 30px;
-  }
-  h3 {
-    font-size: 1.4375rem;
-    color: #99aadd;
-  }
+  width: 100%;
 `;
 
 const Paragraph = styled.p`
@@ -35,14 +27,50 @@ const Paragraph = styled.p`
   padding: 2rem 0;
 `;
 
-export default function Card({ icon, title, body }) {
+const Left = styled.div``;
+const Right = styled.div`
+  width: 70%;
+  color: #3f3d3d;
+  h3 {
+    font-size: 1rem;
+    color: #99aadd;
+    @media (min-width: 1200px) {
+      font-size: 1.4375rem;
+    }
+  }
+  h4 {
+    font-size: 0.8rem;
+    @media (min-width: 1200px) {
+      font-size: 1rem;
+    }
+  }
+  h5 {
+    font-size: 0.6rem;
+    @media (min-width: 1200px) {
+      font-size: 0.8rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    width: 75%;
+  }
+`;
+
+export default function Card(props) {
   return (
     <Container>
       <Header>
-        <h3>{title}</h3>
-        <div>{icon}</div>
+        <Left>
+          <img width="60" src={props.icon} alt={props.title} />
+        </Left>
+        <Right>
+          <h3>{props.title}</h3>
+          <h4>{props.subtitle}</h4>
+          <h5>
+            {props.datefrom}-{props.dateto}
+          </h5>
+        </Right>
       </Header>
-      <Paragraph>{body}</Paragraph>
+      <Paragraph>{props.body}</Paragraph>
     </Container>
   );
 }

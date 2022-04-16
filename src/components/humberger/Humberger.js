@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Burger = styled.button`
   position: absolute;
-  background-color: ${({ open }) => (open ? "transparent" : "black")};
+  background-color: ${({ open }) => (open ? "transparent" : "#fff")};
   top: 5%;
   right: 5%;
   display: flex;
@@ -12,7 +12,7 @@ const Burger = styled.button`
   align-items: center;
   width: 2.8rem;
   height: 2.5rem;
-  opacity: 0.7;
+  opacity: 1;
   border: 0;
   border-radius: 4px;
   cursor: pointer;
@@ -21,7 +21,7 @@ const Burger = styled.button`
   div {
     width: 2.3rem;
     height: 5px;
-    background: white;
+    background: ${({ open }) => (open ? "#fff" : "#000")};
     border-radius: 10px;
     transition: all 0.3s linear;
     transform-origin: 1px;

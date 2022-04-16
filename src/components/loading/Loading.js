@@ -30,7 +30,7 @@ export default function Loading() {
       <div>
         <svg
           className="tea"
-          viewbox="0 0 37 48"
+          viewBox="0 0 37 48"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >

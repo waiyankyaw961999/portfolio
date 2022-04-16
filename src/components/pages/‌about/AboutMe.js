@@ -25,27 +25,34 @@ const Header = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: ${({ fs }) => (fs ? "0 4.25rem" : "0 2.25rem")};
+  padding: 4.25rem 4.25rem;
   justify-content: center;
   animation: 1s ${fadein};
+  @media (max-width: 1200px) {
+    padding: 4.25rem 2.25rem;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: ${({ fs }) => (fs ? "3rem" : "4rem")};
+  font-size: 4rem;
   margin-bottom: 2.25rem;
   width: 100%;
+  @media (max-width: 1200px) {
+    font-size: 3rem;
+  }
 `;
 
 const Subtitle = styled.p`
   letter-spacing: 2px;
   margin-bottom: 1.5rem;
-  font-size: ${({ fs }) => (fs ? "0.3rem" : "1.25rem")};
+  font-size: 1.25rem;
 
   &:last-child {
     margin-bottom: 0;
   }
   @media (max-width: 1200px) {
     text-align: left;
+    font-size: 1.25rem;
   }
 `;
 export default function AboutMe({ windowWidth }) {
@@ -57,13 +64,13 @@ export default function AboutMe({ windowWidth }) {
             Self Introduction
           </Title>
           <Subtitle>
-            I'm a junior software developer with over a year in software
-            development. Highly motivated and passionate to learn and develop
-            bussiness applications.
+            I'm a software developer with over two years of experience in
+            software development. Highly motivated and eager to learn and
+            collaborate with teams.
           </Subtitle>
           <Subtitle>
-            I'm flexible, detailed-oriented, independent software developer with
-            strong personalities and communications.
+            I'm flexible, detailed-oriented, self-dependent software developer
+            with strong personalities and communications.
           </Subtitle>
         </Header>
       </Left>

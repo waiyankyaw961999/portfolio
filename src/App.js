@@ -70,13 +70,17 @@ const PanelItem = styled.li`
   display: flex;
   position: relative;
   list-style: none;
-  border-top: 1px solid #fff;
+
   width: 100%;
   padding: 0.875rem;
   justify-content: center;
   color: white;
   font-size: 20px;
   font-weight: 600;
+
+  &:hover {
+    background: #faf0e6;
+  }
 
   &:last-child {
     border-bottom: 1px solid #fff;
@@ -114,15 +118,28 @@ const Display = styled.div`
 function App() {
   const [loading, setLoading] = useState("");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [offset, setOffset] = useState();
+
   const [open, setOpen] = useState(false);
+
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
 
+  const handleScroll = () => {
+    setOffset(window.scrollY);
+  };
+
+  console.log(offset);
+
   useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -151,6 +168,7 @@ function App() {
           <Display windowWidth={windowWidth}>
             <Humberger
               windowWidth={windowWidth}
+              offset={offset}
               open={open}
               setOpen={setOpen}
             />

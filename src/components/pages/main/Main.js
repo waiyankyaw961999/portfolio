@@ -3,36 +3,41 @@ import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import Button from "../../button/Button";
 import { slideInLeft } from "react-animations";
+import SocialButtons from "../../../components/socials/SocialButtons";
 
 const bounceInAnimation = keyframes`${slideInLeft}`;
 
 const Header = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding: 0 4.25rem;
+  height: 100vh;
+  width:100%;
   justify-content: center;
-  
+  padding:4.25rem 4.25rem;
   animation: 1s ${bounceInAnimation};
   @media (max-width:1200px) {
-  margin-top: 2rem;
-  padding:0 3rem;
+  margin-top: 4.25rem;
+  padding:0 2rem;
   
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2rem;
   @media (min-width: 1200px) {
     font-size: 4rem;
   }
 `;
-const Subtitle = styled.p`
+const Subtitle = styled.div`
   letter-spacing: 4px;
+  position: relative;
+  display: flex;
   margin-top: 3rem;
-  font-size: 1.25rem;
+  word-break: break-all;
+  white-space: normal;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
   @media (min-width: 1200px) {
-    font-size: 2.05rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -40,17 +45,22 @@ export default function Main() {
   return (
     <Header>
       <Title>
-        Hi,
+        Hello,
         <br /> My name is Wai
         <br />
         Full stack Web Developer.
       </Title>
 
-      <Subtitle>Django/NextJS/ReactJS/Laravel</Subtitle>
+      <Subtitle>
+        Django/Laravel/
+        <br />
+        NextJS/ReactJS
+      </Subtitle>
 
       <Link style={{ width: "10rem" }} to="/contact">
         <Button name="Contact Me" />
       </Link>
+      <SocialButtons />
     </Header>
   );
 }

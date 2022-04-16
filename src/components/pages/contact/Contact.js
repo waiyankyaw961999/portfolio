@@ -88,7 +88,7 @@ const Iframe = styled.iframe`
     height: 80vh;
   }
 `;
-export default function Contact({ windowWidth }) {
+export default function Contact() {
   return (
     <>
       <Left>

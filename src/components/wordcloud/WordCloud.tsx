@@ -138,6 +138,8 @@ export default function WordCloud() {
     "mongodb",
     "django",
     "graphql",
+    "nodedotjs",
+    "nextdotjs",
   ].map((s) =>
     renderSimpleIcon({
       icon: allIcons.Get(s),

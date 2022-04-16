@@ -14,9 +14,11 @@ const Left = styled.div`
 
 const Right = styled.div`
   flex: 1;
+  padding: 4rem 0;
   background-color: #1f2847;
   display: flex;
   width: 100%;
+  height: 100%;
   justify-content: center;
 `;
 
@@ -24,9 +26,14 @@ const Header = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: ${({ fs }) => (fs ? "0 4.25rem" : "0 2.25rem")};
-  justify-content: center;
-  align-items: center;
+  padding-top: 4.25rem;
+  padding: 0 2.25rem;
+
+  @media (min-width: 1200px) {
+    padding: 4.25rem;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h1`
@@ -36,10 +43,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: ${({ fs }) => (fs ? "0.3rem" : "1.25rem")};
-  text-align: justify;
+  font-size: 1rem;
   letter-spacing: 2px;
   margin-bottom: 1.5rem;
+  text-align: left;
 
   a {
     text-decoration: none;
@@ -53,14 +60,19 @@ const Subtitle = styled.p`
   &:last-child {
     margin-bottom: 0;
   }
+  @media (min-width: 1200px) {
+    text-align: justify;
+    font-size: 1.2rem;
+  }
 `;
+
 const ProgressWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   width: 86%;
-  height: ${(windowWidth) => (windowWidth < 1200 ? "80vh" : "100vh")};
 `;
 
 export default function Skills({ windowWidth }) {
@@ -72,20 +84,11 @@ export default function Skills({ windowWidth }) {
             Skills and Experiences
           </Title>
           <Subtitle>
-            With over a year expereience in software developement and
-            engineering, I have done some personal projects to tailor my web
-            development expertise.
+            With over a year experience in software developement and
+            engineering, I have done some personal projects to tailor my
+            software development expertise.
           </Subtitle>
-          <Subtitle>
-            I also have foundation in data science, data analytics and
-            statistics AI with Python and other digital analytic tools such as
-            Tableau and PowerBI.
-          </Subtitle>
-          <Subtitle>
-            As I am trying to become a full-stack developer, my main foucs on
-            backend is Python/Django, and NextJs/ReactJs for frontend. I am also
-            learning NodeJs and ExpressJs in my free time.
-          </Subtitle>
+
           <Subtitle>
             Visit my{" "}
             <a href="https://www.linkedin.com/in/wai-yan-k-152b22106/">

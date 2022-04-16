@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
 import { Link } from "react-router-dom";
-
+import SocialButtons from "../socials/SocialButtons";
 const Panel = styled.div`
   position: absolute;
   top: 0;
@@ -73,6 +72,7 @@ const StyledMenu = styled.nav`
   height: 100vh;
   transition: all 0.3s ease-in-out;
 `;
+
 export default function Menu({ open, setOpen, setLoading }) {
   return (
     <StyledMenu open={open}>
@@ -89,6 +89,9 @@ export default function Menu({ open, setOpen, setLoading }) {
             <Title>Wai Yan</Title>
           </Link>
           <SubTitle>Full Stack Developer</SubTitle>
+          <div style={{ width: "70%" }}>
+            <SocialButtons />
+          </div>
         </TitleContainer>
         <PanelList>
           <Link
