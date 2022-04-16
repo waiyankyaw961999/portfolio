@@ -40,7 +40,12 @@ const Subtitle = styled.div`
     font-size: 1.8rem;
   }
 `;
-
+const SocialButtonWrapper = styled.div`
+  width: 100%;
+  @media (min-width: 1200px) {
+    width: 15%;
+  }
+`;
 export default function Main() {
   return (
     <Header>
@@ -50,17 +55,17 @@ export default function Main() {
         <br />
         Full stack Web Developer.
       </Title>
-
       <Subtitle>
         Django/Laravel/
         <br />
         NextJS/ReactJS
       </Subtitle>
-
       <Link style={{ width: "10rem" }} to="/contact">
         <Button name="Contact Me" />
       </Link>
-      <SocialButtons />
+      <SocialButtonWrapper>
+        <SocialButtons />
+      </SocialButtonWrapper>
     </Header>
   );
 }
