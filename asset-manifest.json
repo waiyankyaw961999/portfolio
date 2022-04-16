@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.d3b02653.css",
-    "main.js": "/static/js/main.334e36b2.js",
+    "main.js": "/static/js/main.b002a100.js",
     "static/media/logo_uopeople.png": "/static/media/logo_uopeople.df88668c7855d30d5ba8.png",
     "static/media/ms.jpg": "/static/media/ms.16c12466ae55100c74c8.jpg",
     "static/media/logo_mtu.png": "/static/media/logo_mtu.625674e2523aa639f909.png",
     "index.html": "/index.html",
     "main.d3b02653.css.map": "/static/css/main.d3b02653.css.map",
-    "main.334e36b2.js.map": "/static/js/main.334e36b2.js.map"
+    "main.b002a100.js.map": "/static/js/main.b002a100.js.map"
   },
   "entrypoints": [
     "static/css/main.d3b02653.css",
-    "static/js/main.334e36b2.js"
+    "static/js/main.b002a100.js"
   ]
 }
