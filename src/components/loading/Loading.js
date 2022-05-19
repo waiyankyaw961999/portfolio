@@ -21,8 +21,7 @@ const Container = styled.div`
     width: 48px;
   }
 `;
-const LoadingText = styled.p`
-margin`;
+const LoadingText = styled.p``;
 
 export default function Loading() {
   return (

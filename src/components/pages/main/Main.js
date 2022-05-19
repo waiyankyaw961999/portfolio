@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 import Button from "../../button/Button";
 import { slideInLeft } from "react-animations";
 import SocialButtons from "../../../components/socials/SocialButtons";
-
+import Typewriter from "typewriter-effect";
 const bounceInAnimation = keyframes`${slideInLeft}`;
 
 const Header = styled.div`
@@ -52,8 +52,23 @@ export default function Main() {
       <Title>
         Hello,
         <br /> My name is Wai
+        <span className="wave-emoji" role="img" aria-label="waving hand">
+          👋
+        </span>
         <br />
-        Full stack Web Developer.
+        <Typewriter
+          options={{
+            strings: [
+              "A full stack developer.",
+              "Passionate software engineer.",
+            ],
+            autoStart: true,
+            loop: true,
+            deleteSpeed: 10,
+            cursor: "<",
+            delay: 100,
+          }}
+        />
       </Title>
       <Subtitle>Django/NextJS/ReactJS</Subtitle>
       <Link style={{ width: "10rem" }} to="/contact">
