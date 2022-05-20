@@ -8,7 +8,7 @@ import AboutMe from "./components/pages/‌about/AboutMe";
 import Skills from "./components/pages/skills/Skills";
 import Menu from "./components/menu/Menu";
 import Loading from "./components/loading/Loading";
-import Services from "./components/pages/services/Services";
+import Education from "./components/pages/edu/Education";
 import ScrollToTop from "./components/scrolltop/ScrollToTop";
 
 import {
@@ -130,8 +130,6 @@ function App() {
     setOffset(window.scrollY);
   };
 
-  console.log(offset);
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
@@ -227,16 +225,18 @@ function App() {
                 <PanelItem
                   style={{
                     backgroundColor:
-                      window.location.pathname === "/services" && "#2356ee",
+                      window.location.pathname === "/education" && "#2356ee",
                   }}
                 >
                   <Link
                     onClick={() => setLoading(window.location.href)}
                     className="navigation_link"
-                    to="/services"
+                    to="/education"
                   >
                     <ServicesSVG
-                      color={window.location.pathname === "/services" && "#fff"}
+                      color={
+                        window.location.pathname === "/education" && "#fff"
+                      }
                     />
                   </Link>
                 </PanelItem>
@@ -285,8 +285,8 @@ function App() {
                   element={<Contact windowWidth={windowWidth} />}
                 />
                 <Route
-                  path="/services"
-                  element={<Services windowWidth={windowWidth} />}
+                  path="/education"
+                  element={<Education windowWidth={windowWidth} />}
                 />
               </Routes>
             </Container>

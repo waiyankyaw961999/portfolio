@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-import Button from "../../button/Button";
 import { slideInLeft } from "react-animations";
 import SocialButtons from "../../../components/socials/SocialButtons";
 import Typewriter from "typewriter-effect";
@@ -71,9 +69,9 @@ export default function Main() {
         />
       </Title>
       <Subtitle>Django/NextJS/ReactJS</Subtitle>
-      <Link style={{ width: "10rem" }} to="/contact">
+      {/* <Link style={{ width: "10rem" }} to="/contact">
         <Button name="Contact Me" />
-      </Link>
+      </Link> */}
       <SocialButtonWrapper>
         <SocialButtons />
       </SocialButtonWrapper>
