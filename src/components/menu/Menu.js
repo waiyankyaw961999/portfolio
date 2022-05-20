@@ -5,9 +5,9 @@ import SocialButtons from "../socials/SocialButtons";
 
 const Panel = styled.div`
   position: absolute;
-  display: flex;
   width: 100%;
   justify-content: center;
+  display: ${({ open }) => (open ? "flex" : "none")};
 `;
 
 const PanelList = styled.ul`
@@ -20,7 +20,7 @@ const PanelList = styled.ul`
   align-items: center;
   visiblity: ${({ open }) => (open ? "visible" : "hidden")};
   opacity: ${({ open }) => (open ? "1" : "0")};
-  transition: visibility 0s, opacity 0.3s ease-in-out;
+  transition: visibility 5s, opacity 5s ease-in-out;
 `;
 
 const PanelItem = styled.li`
@@ -31,7 +31,6 @@ const PanelItem = styled.li`
   color: #000;
   font-size: 20px;
   font-weight: 600;
-  transition: opacity 5s ease-in;
   cursor: pointer;
   &:hover {
     color: blue;
@@ -46,7 +45,7 @@ const StyledMenu = styled.nav`
 export default function Menu({ open, setOpen, setLoading }) {
   return (
     <StyledMenu open={open}>
-      <Panel>
+      <Panel open={open}>
         <PanelList open={open}>
           <Link
             style={{ width: "100%" }}
