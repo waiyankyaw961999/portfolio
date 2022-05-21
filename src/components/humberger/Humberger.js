@@ -51,11 +51,9 @@ const MenuCircle = styled.div`
   background-color: #0ac2ff;
   border-radius: 50%;
   transition-delay: 0.3s ease-in-out;
-
   transform: ${({ open }) => open && "translateX(52%) translateY(-55%)"};
-
   transition: all 0.6s cubic-bezier(0.2, 1, 0.2, 1) 0s,
-    all 0.6s cubic-bezier(0.2, 1, 0.2, 1) 0.12s;
+    all 0၅s cubic-bezier(0.2, 1, 0.2, 1) 0.1s;
 `;
 
 export default function Humberger({ windowWidth, open, setOpen }) {

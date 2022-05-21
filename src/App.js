@@ -143,7 +143,7 @@ function App() {
   useEffect(() => {
     const loadData = async () => {
       // Wait for two second
-      await new Promise((r) => setTimeout(r, 2000));
+      await new Promise((r) => setTimeout(r, 1000));
       // Toggle loading state
       // setLoading((loading) => !loading);
       setLoading("");
